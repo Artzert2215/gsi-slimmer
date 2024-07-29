@@ -24,6 +24,6 @@ fi
 rm -Rf tmp
 mkdir -p d tmp
 e2fsck -y -f slimmed.img
-resize2fs slimmed.img 3500M
+resize2fs slimmed.img 6000M
 e2fsck -E unshare_blocks -y -f slimmed.img
 mount -o loop,rw slimmed.img d
