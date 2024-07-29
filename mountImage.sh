@@ -4,6 +4,7 @@
 #sudo bash mountImage.sh [/path/to/system/image]
 
 #cleanups
+rm -Rf slimmed.img
 umount d
 set -ex
 origin="$(readlink -f -- "$0")"
