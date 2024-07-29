@@ -21,10 +21,12 @@ After you are done picking it will ask if you want to securize, this will remove
 
 ## Usage on Linux
 Requires linux and the `git`, `xattr` and `python` packages.
+First clone the repo and then cd to the repo.
+Then run the python file:
 ```
-sudo python ... [TODO]
+sudo python ./runme.py /path/to/system.img
 ```
-The output for above would be `s-secure.img`.
+The output should be `slimmed.img`.
 
 ## Usage on Windows
 Install WSL (Windows Subsystem for Linux) and then follow linux instructions in your WSL environment.
