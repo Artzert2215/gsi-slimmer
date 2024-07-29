@@ -2,10 +2,14 @@
 > Project is not finished, DO NOT USE
 
 ## About
-This repo contains a python file made to aid in the removal of unneeded apps from GSI images.
-It will mount the image and then iterate over all installed priv-apps providing context, app names and sizes.
-You can then choose to keep or remove the app.
+> [!CAUTION]
+> This only supports arm64 a/b non vndklite images
+
+This repo contains a python file made to aid in the removal of unneeded apps from GSI images.\
+It will mount the image and then iterate over all installed priv-apps providing context, app names and sizes.\
+You can then choose to keep or remove the app.\
 After you are done picking it will ask if you want to securize, this will remove the built in superuser and tell the rom to securize.
+
 > [!WARNING]  
 > Not all roms support securization and implementations may vary, devices may stop booting when securized.
 
