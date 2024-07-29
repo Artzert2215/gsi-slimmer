@@ -1,55 +1,26 @@
+> [!CAUTION]
+> Project is not finished, DO NOT USE
+
+## About
+This repo contains a python file made to aid in the removal of unneeded apps from GSI images.
+It will mount the image and then iterate over all installed priv-apps providing context, app names and sizes.
+You can then choose to keep or remove the app.
+After you are done picking it will ask if you want to securize, this will remove the built in superuser and tell the rom to securize.
+> [!WARNING]  
+> Not all roms support securization and implementations may vary, devices may stop booting when securized.
+
+> [!IMPORTANT]  
+> If you use this tool and experience issues, don't pester builders with issues possibly caused by using this tool, run unmodified vanilla versions first.
+
+> [!NOTE]  
+> This tool is built for my personal use, this means I probably wont be there to fix any bugs you experience, feel free to contribute if you want to fix those bugs yourself.
 
 ## Usage on Linux
-
-Generate secure variant from any:
+Requires linux and the `git`, `xattr` and `python` packages.
 ```
-sudo bash securize.sh system.img
+sudo python ... [TODO]
 ```
 The output for above would be `s-secure.img`.
 
-Generate A64 AB VNDKLite from A64 AB:
-```
-sudo bash lite-adapter.sh 32 system.img
-```
-Generate ARM64 AB VNDKLite from ARM64 AB:
-```
-sudo bash lite-adapter.sh 64 system.img
-```
-Generate ARM A-only from ARM AB (deprecated since Android 12):
-```
-sudo bash run.sh 32 system.img
-```
-Generate ARM64 A-only from ARM64 AB (deprecated since Android 12):
-```
-sudo bash run.sh 64 system.img`
-```
-The output for above would be `s.img`.
-
 ## Usage on Windows
-
-Windows users (with fairly recent hardware and Windows version) can run these scripts on Docker, without having to set up a full Ubuntu installation/VM. For people who are new to Docker, below are crude steps to e.g. securize an image with it:
-
- 1. [Install Docker Desktop](https://docs.docker.com/desktop/windows/install/). When prompted to select between WSL2 or Hyper-V backends, choose WSL2.
- 2. Make sure Docker is in **Linux** Container mode (it should be by default) - right click the tray icon, one of the menu items should say "Switch to **Windows** Containers", **don't** click it.
- 3. Pick/make a folder (e.g. `C:\out`) and put your GSI image there (e.g. `system.img`).
- 4. Only if on Hyper-V backend: open Docker Desktop - Settings - Resources - File sharing and add the above folder. This settings won't be present on WSL2 backend.
- 5. Open Command Prompt (`cmd`) and run:
-```
-docker pull ubuntu
-docker run -it -v C:\out:/out --privileged ubuntu
-```
-This starts a Ubuntu container and mounts `C:\out` to `/out` inside it.
-
- 6. You should now be in a privileged (`#`) Ubuntu terminal. Run:
-```
-apt update
-apt install -y git xattr
-git clone https://github.com/AndyCGYan/sas-creator
-cd sas-creator
-bash securize.sh /out/system.img
-mv s-secure.img /out
-exit
-```
-You can now flash the securized image `C:\out\s-secure.img`.
-
-Note: intentionally not using Dockerfile.
+Install WSL (Windows Subsystem for Linux) and then follow linux instructions in your WSL environment.
