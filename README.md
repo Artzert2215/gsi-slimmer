@@ -1,6 +1,3 @@
-> [!CAUTION]
-> Project is not finished, DO NOT USE
-
 ## About
 > [!CAUTION]
 > This only supports arm64 a/b non vndklite images
@@ -26,6 +23,10 @@ First clone the repo and then cd to the repo.\
 Then run the python file:
 ```
 sudo -E python ./runme.py /path/to/system.img
+```
+Afterwards you will need to manually finish the process by running:
+```
+sudo bash unmountImage.sh
 ```
 The output should be `slimmed.img`.
 
