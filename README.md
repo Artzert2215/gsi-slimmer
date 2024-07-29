@@ -25,7 +25,7 @@ Requires the `pyaxmlparser` python module, you can install it using `pip install
 First clone the repo and then cd to the repo.\
 Then run the python file:
 ```
-sudo python ./runme.py /path/to/system.img
+sudo -E python ./runme.py /path/to/system.img
 ```
 The output should be `slimmed.img`.
 
