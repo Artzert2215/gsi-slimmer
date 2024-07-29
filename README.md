@@ -20,8 +20,9 @@ After you are done picking it will ask if you want to securize, this will remove
 > This tool is built for my personal use, this means I probably wont be there to fix any bugs you experience, feel free to contribute if you want to fix those bugs yourself.
 
 ## Usage on Linux
-Requires linux and the `git`, `xattr` and `python` packages.
-First clone the repo and then cd to the repo.
+Requires linux and the `git`, `xattr`, `python3` and `python3-pip` packages.\
+Requires the `pyaxmlparser` python module, you can install it using `pip install pyaxmlparser`. (used to get apk file details)\
+First clone the repo and then cd to the repo.\
 Then run the python file:
 ```
 sudo python ./runme.py /path/to/system.img
